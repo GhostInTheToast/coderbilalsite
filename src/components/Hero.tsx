@@ -4,23 +4,13 @@ import styled from 'styled-components';
 
 const HeroSection = styled.section`
   min-height: 100vh;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
-  padding: 2rem 0;
-  
-  @media (max-width: 768px) {
-    height: auto;
-    min-height: 100vh;
-    padding: 4rem 0;
-    /* Fix for mobile viewport issues */
-    min-height: -webkit-fill-available;
-    min-height: 100dvh;
-  }
+  padding-top: 2rem;
   
   &::before {
     content: '';
@@ -41,23 +31,13 @@ const HeroContent = styled.div`
   padding: 0 2rem;
   z-index: 1;
   position: relative;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
 `;
 
 const Greeting = styled(motion.h1)`
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 300;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
-  
-  @media (max-width: 768px) {
-    margin: 1rem 0 1rem 0;
-  }
 `;
 
 const Name = styled(motion.h2)`
