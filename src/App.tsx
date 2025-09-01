@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import About from './components/About';
 import Contact from './components/Contact';
+import FloatingGhost from './components/FloatingGhost';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -23,6 +24,7 @@ const MainContent = styled.main`
 function App() {
   return (
     <AppContainer>
+      <FloatingGhost />
       <Navbar />
       <MainContent>
         <Hero />
