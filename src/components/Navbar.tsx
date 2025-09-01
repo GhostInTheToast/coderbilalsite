@@ -118,7 +118,7 @@ const MobileMenu = styled(motion.div)`
 const MobileNavLink = styled(motion.a)`
   display: block;
   text-decoration: none;
-  color: white;
+  color: #333;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 1rem 0;

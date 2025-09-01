@@ -158,10 +158,37 @@ section {
   .hide-mobile {
     display: none !important;
   }
+  
+  /* Mobile-specific improvements */
+  body {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve mobile scrolling */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (min-width: 769px) {
   .hide-desktop {
     display: none !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  body {
+    font-size: 14px;
   }
 }

@@ -12,6 +12,11 @@ const HeroSection = styled.section`
   overflow: hidden;
   padding: 6rem 0 4rem 0;
   
+  @media (max-width: 768px) {
+    padding: 4rem 0 2rem 0;
+    min-height: 90vh;
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -31,6 +36,11 @@ const HeroContent = styled.div`
   padding: 0 2rem;
   z-index: 1;
   position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
 `;
 
 const Greeting = styled(motion.h1)`
@@ -83,6 +93,12 @@ const CTAButton = styled(motion.button)`
   min-width: 250px;
   margin-bottom: 2rem;
   
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+    min-width: 200px;
+    font-size: 1rem;
+  }
+  
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.5);
@@ -98,6 +114,10 @@ const ScrollIndicator = styled(motion.div)`
   color: white;
   opacity: 0.7;
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+    bottom: 1rem;
+  }
   
   &::before {
     content: '↓';
@@ -115,6 +135,24 @@ const ScrollIndicator = styled(motion.div)`
     60% {
       transform: translateY(-5px);
     }
+  }
+`;
+
+const GitHubContributionContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    max-width: 90%;
   }
 `;
 
@@ -201,19 +239,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          <motion.div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              background: 'rgba(255, 255, 255, 0.1)',
-              padding: '1.5rem',
-              borderRadius: '15px',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              maxWidth: '500px',
-              margin: '0 auto'
-            }}
+          <GitHubContributionContainer
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
@@ -227,7 +253,7 @@ const Hero: React.FC = () => {
                 boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
               }}
             />
-          </motion.div>
+          </GitHubContributionContainer>
           <motion.p
             style={{
               textAlign: 'center',

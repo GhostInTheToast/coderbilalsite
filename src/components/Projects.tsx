@@ -109,6 +109,10 @@ const ProjectImage = styled.div<{ bgColor: string }>`
 
 const ProjectContent = styled.div`
   padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `;
 
 const ProjectTitle = styled.h3`

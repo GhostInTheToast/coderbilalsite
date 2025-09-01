@@ -14,6 +14,10 @@ const GhostEmoji = styled(motion.div)`
   z-index: 9999;
   font-size: 24px;
   user-select: none;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const FloatingGhost: React.FC = () => {
@@ -21,11 +25,22 @@ const FloatingGhost: React.FC = () => {
     const [ghostId, setGhostId] = useState(0);
 
     useEffect(() => {
-        const handleClick = (e: MouseEvent) => {
+        const handleClick = (e: MouseEvent | TouchEvent) => {
+            let clientX: number, clientY: number;
+            
+            if (e instanceof TouchEvent) {
+                const touch = e.touches[0];
+                clientX = touch.clientX;
+                clientY = touch.clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+
             const newGhost: Ghost = {
                 id: ghostId,
-                x: e.clientX,
-                y: e.clientY,
+                x: clientX,
+                y: clientY,
             };
 
             setGhosts(prev => [...prev, newGhost]);
@@ -38,9 +53,11 @@ const FloatingGhost: React.FC = () => {
         };
 
         document.addEventListener('click', handleClick);
+        document.addEventListener('touchstart', handleClick);
 
         return () => {
             document.removeEventListener('click', handleClick);
+            document.removeEventListener('touchstart', handleClick);
         };
     }, [ghostId]);
 

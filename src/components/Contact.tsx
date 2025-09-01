@@ -53,6 +53,11 @@ const ContactInfo = styled(motion.div)`
   overflow: hidden;
   max-width: 500px;
   
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
   &::before {
     content: '';
     position: absolute;
