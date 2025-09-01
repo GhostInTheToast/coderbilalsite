@@ -10,7 +10,7 @@ const HeroSection = styled.section`
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
-  padding-top: 6rem;
+  padding: 6rem 0 4rem 0;
   
   &::before {
     content: '';
@@ -36,7 +36,7 @@ const HeroContent = styled.div`
 const Greeting = styled(motion.h1)`
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 `;
 
@@ -62,7 +62,7 @@ const Title = styled(motion.h3)`
 const Description = styled(motion.p)`
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.6;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   opacity: 0.8;
   max-width: 600px;
   margin-left: auto;
@@ -73,13 +73,15 @@ const CTAButton = styled(motion.button)`
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 1.2rem 3rem;
   font-size: 1.1rem;
   font-weight: 500;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  min-width: 250px;
+  margin-bottom: 2rem;
   
   &:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -193,18 +195,8 @@ const Hero: React.FC = () => {
           <br />
           Full Stack Engineer        </Title>
 
-        <Description
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          AI/ML leader with expertise in computer vision, LLMs, and full-stack development.
-          Specializing in building scalable AI solutions, enterprise applications, and
-          innovative software that drives business value.
-        </Description>
-
         <motion.div
-          style={{ marginBottom: '2rem' }}
+          style={{ marginBottom: '1rem' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
