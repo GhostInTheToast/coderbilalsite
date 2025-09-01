@@ -8,10 +8,10 @@ const Nav = styled.nav<{ scrolled: boolean }>`
   left: 0;
   right: 0;
   z-index: 1000;
-  background: ${props => props.scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent'};
+  background: ${props => props.scrolled ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'transparent'};
   backdrop-filter: ${props => props.scrolled ? 'blur(20px)' : 'none'};
   transition: all 0.3s ease;
-  border-bottom: ${props => props.scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
+  border-bottom: ${props => props.scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none'};
 `;
 
 const NavContainer = styled.div`
@@ -55,7 +55,7 @@ const NavLink = styled(motion.a)`
     left: 0;
     width: 0;
     height: 2px;
-    background: #007AFF;
+    background: white;
     transition: width 0.3s ease;
   }
   
