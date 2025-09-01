@@ -242,7 +242,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            Consistent daily contributions showcasing dedication and continuous learning
+            Consistent contributions showcasing dedication and continuous learning
           </motion.p>
         </motion.div>
 

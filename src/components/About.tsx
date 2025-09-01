@@ -234,14 +234,14 @@ const About: React.FC = () => {
           >
             <AboutTitle>Who I Am</AboutTitle>
             <AboutText>
-              I'm the Head of AI/ML at Moara.io and Full Stack Engineer by trade with a strong foundation in computer science and a passion for building
-              scalable AI solutions and enterprise applications. My journey in tech began with curiosity about how things work,
-              and it has evolved into a leadership role in AI/ML, specializing in computer vision, LLMs, and full-stack development.
+              I'm the Head of AI/ML at Moara.io and a Full Stack Innovator by trade with a strong foundation in computer science and a passion for building
+              scalable solutions, robust APIs, and enterprise applications. My journey in tech began with curiosity about how things work,
+              and it has evolved into a leadership role where I specialize in full-stack development, API design, and AI/ML integration.
             </AboutText>
             <AboutText>
-              I believe in writing clean, maintainable code and staying at the forefront of AI/ML technologies.
-              When I'm not coding, you'll find me fine-tuning transformer models, contributing to
-              open-source projects, or sharing knowledge with the developer community.
+              I believe in writing clean, maintainable code and architecting systems that scale. I excel at building RESTful APIs,
+              microservices, and seamless integrations. When I'm not coding, you'll find me contributing to
+              open-source projects, exploring new technologies, or sharing knowledge with the developer community.
             </AboutText>
 
             <StatsGrid>
