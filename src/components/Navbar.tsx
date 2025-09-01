@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Nav = styled.nav<{ scrolled: boolean }>`
   position: fixed;
@@ -27,7 +27,7 @@ const NavContainer = styled.div`
 const Logo = styled(motion.div)`
   font-size: 1.5rem;
   font-weight: 700;
-  color: #000;
+  color: white;
   cursor: pointer;
 `;
 
@@ -42,7 +42,7 @@ const NavLinks = styled.div`
 
 const NavLink = styled(motion.a)`
   text-decoration: none;
-  color: #000;
+  color: white;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -61,6 +61,30 @@ const NavLink = styled(motion.a)`
   
   &:hover::after {
     width: 100%;
+  }
+`;
+
+const DownloadResumeButton = styled(motion.button)`
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  margin-right: 1rem;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -94,7 +118,7 @@ const MobileMenu = styled(motion.div)`
 const MobileNavLink = styled(motion.a)`
   display: block;
   text-decoration: none;
-  color: #000;
+  color: white;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 1rem 0;
@@ -134,7 +158,7 @@ const Navbar: React.FC = () => {
         >
           Bilal Mahmood
         </Logo>
-        
+
         <NavLinks>
           <NavLink
             whileHover={{ y: -2 }}
@@ -161,12 +185,20 @@ const Navbar: React.FC = () => {
             Contact
           </NavLink>
         </NavLinks>
-        
+
+        <DownloadResumeButton
+          onClick={() => window.open('/Bilal_Mahmood_Resume_x.pdf', '_blank')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          📄 Download Resume
+        </DownloadResumeButton>
+
         <MobileMenuButton onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? '✕' : '☰'}
         </MobileMenuButton>
       </NavContainer>
-      
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <MobileMenu
