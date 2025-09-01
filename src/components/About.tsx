@@ -58,7 +58,10 @@ const AboutContent = styled(motion.div)`
   border: 1px solid rgba(0, 0, 0, 0.05);
   
   @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+    width: 92%;
+    margin: 0 auto;
+    border-radius: 16px;
   }
 `;
 
@@ -116,7 +119,10 @@ const Timeline = styled(motion.div)`
   border: 1px solid rgba(0, 0, 0, 0.05);
   
   @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+    width: 92%;
+    margin: 0 auto;
+    border-radius: 16px;
   }
 `;
 
