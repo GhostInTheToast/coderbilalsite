@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/apps/noor/privacy-policy",
+      "destination": "/apps/noor/privacy-policy/index.html"
+    },
+    {
+      "source": "/apps/noor/privacy-policy/",
+      "destination": "/apps/noor/privacy-policy/index.html"
+    }
+  ]
+}

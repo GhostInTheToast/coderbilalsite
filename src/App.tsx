@@ -5,6 +5,7 @@ import FloatingGhost from './components/FloatingGhost';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import NoorPrivacyPolicy from './components/NoorPrivacyPolicy';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 
@@ -22,6 +23,11 @@ const MainContent = styled.main`
 `;
 
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, '');
+  if (path === '/apps/noor/privacy-policy') {
+    return <NoorPrivacyPolicy />;
+  }
+
   return (
     <AppContainer>
       <FloatingGhost />
