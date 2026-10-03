@@ -69,16 +69,6 @@ const Title = styled(motion.h3)`
   text-transform: uppercase;
 `;
 
-const Description = styled(motion.p)`
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  opacity: 0.8;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
 const CTAButton = styled(motion.button)`
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
